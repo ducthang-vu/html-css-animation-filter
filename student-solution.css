@@ -131,11 +131,11 @@
 
 /* 12 */
 .ex-12-button:hover .ex-12-top-white {
-  animation: budge-12-top 5s linear;
+  animation: budge-12-top 4s linear;
 }
 
 .ex-12-button:hover .ex-12-bottom-white {
-  animation: budge-12-bottom 5s linear;
+  animation: budge-12-bottom 4s linear;
 }
 
 @keyframes budge-12-top {
@@ -164,8 +164,17 @@
 
 
 /* 12 */
+.ex-13-top-white {
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.ex-13-bottom-white {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
 .ex-13-button:hover .ex-13-top-white {
-  background: red;
   animation: budge-13-top 5s linear;
 }
 
@@ -174,40 +183,69 @@
 }
 
 @keyframes budge-13-top {
-  20% {
+  22.2% {
     position: absolute;
     left: 100%;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-100%);
   }
 
-  45% {
+  35.2% {
     position: absolute;
     left: 100%;
     top: 100%;
-    /* transform: translateX(-100%); */
+    transform: translate(0, 0);
   }
 
-  70% {
+  72.2% {
     position: absolute;
     left: 0;
     top: 100%;
-    transform: translateX(-50%);
+    transform: translate(-100%, 0);
   }
 
-  98% {
-    transform: translateX(-50%);
-  }
-}
-
-/* @keyframes budge-13-bottom {
-  50% {
+  85.2% {
     position: absolute;
-    right: 100%;
-    transform: translateX(100%)
+    left: 0;
+    top: 0;
+    transform: translate(-100%, -100% );
   }
 
   100% {
     animation: none;
-  } */
+  }
+}
+
+@keyframes budge-13-bottom {
+  18.5% {
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    transform: translate(-100%, 100%);
+  }
+
+  31.5% {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    transform: translate(-100%, 0);
+  }
+
+  68.5% {
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    transform: translate(0, 0);
+  }
+
+  81.5% {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    transform: translate(0%, 100% );
+  }
+
+  100% {
+    animation: none;
+  }
 }
